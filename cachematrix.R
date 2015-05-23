@@ -20,7 +20,7 @@ makeCacheMatrix <- function(x = matrix()) {
   savecache <- function(cache) { ## function will save the cache to m
     m <<- cache
   }
-  getcache <- function() { ## function will show the cache
+  getcache <- function() { ## function will return the cache
     m
   }
   list(set = set, get = get,
