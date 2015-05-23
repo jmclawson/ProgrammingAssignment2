@@ -3,8 +3,10 @@
 ## save some time. Apparently my matrices are big and my time is
 ## very, very valuable.
 
-## makeCacheMatrix will hold a defined matrix and a given cache
-## that is passed to it.
+## 'makeCacheMatrix' will hold a defined matrix and a given cache
+## that is passed to it. When it is called, it will not only store
+## the appropriate values, but it will also create a list of functions
+## that are available to be called.
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL ## initializes m, which will serve as the cache
@@ -27,7 +29,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## cacheSolve will check to see if a given matrix's inverse has been
+## 'cacheSolve' will check to see if a given matrix's inverse has been
 ## cached already. If it has, it will return the cache. Otherwise,
 ## it will invert the matrix, save the inversion to a cache, and 
 ## then print the inverted matrix.
@@ -55,7 +57,7 @@ cacheSolve <- function(x, ...) {
 ## 2. Introduce the matrix.
 ### > platypus <- makeCacheMatrix(p)
 ##
-## 2.5 (optional) Check the matrix has been introduced correctly.
+## 2.5 (optional) Check the matrix has been introduced correctly. 
 ### > platypus$get()
 ##
 ## 3. Solve the introduced matrix.
