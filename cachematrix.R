@@ -43,3 +43,20 @@ cacheSolve <- function(x, ...) {
   x$savecache(m) ## saves 'm' to the cache
   m ## prints this amount 'm'
 }
+
+## Use these functions on the command line by introducing a matrix 
+## 'p' with 'makeCacheMatrix(p)' and solving it with 
+## 'cacheSolve(makeCacheMatrix(p))'. The easiest way may be to take 
+## it in steps, as follows:
+##
+## 1. Define the matrix.
+### > p <- matrix(1:4, nrow=2)
+##
+## 2. Introduce the matrix.
+### > platypus <- makeCacheMatrix(p)
+##
+## 2.5 (optional) Check the matrix has been introduced correctly.
+### > platypus$get()
+##
+## 3. Solve the introduced matrix.
+### > cacheSolve(platypus)
